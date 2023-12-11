@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Function&nbsp;&nbsp;|&nbsp;&nbsp;Galaxify</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+</head>
+
+<body class="annualBody">
+    <nav class="navbar" id="navbar">
+        <img src="./Images/logo.png" alt="" class="logo" id="logo">
+        <h3 class="navMainTitle">Galaxify</h3>
+        <input type="text" id="feedInput" placeholder="Comment/Complain">
+        <button id="feedBtn"><img width="50" height="50" src="https://img.icons8.com/ios/50/66fcf1/sent--v1.png"
+                alt="sent--v1" /></button>
+        <button class="backBtn btn btnBgDark" onclick="window.location.href = './options.html'">Back</button>
+
+    </nav>
+    <div class="annual-main">
+        <h1>Our Annual Function</h1>
+        <p>
+            a grand celebration of our students' talents and achievements. During this special event, your children will
+            showcase their creativity through captivating skits, deliver heartfelt speeches, and present soul-soothing
+            Tilawat. The stage will come alive with vibrant performances, reflecting the diverse skills and
+            accomplishments of our students. It's an occasion that fosters a sense of pride and unity within our school
+            community. We look forward to creating cherished memories with you, celebrating the vibrant spirit of our
+            students.
+        </p>
+        <div class="annualCommentSection">
+            <input type="text" placeholder="Comment your ideas here..." id="annualTextInput">
+            <button class="btn" id="inputBtn">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script type="module">
+        import { appDatabase, ref, set, get } from "./Firebase/firebaseConfig.js";
+        const annualTextInput = document.getElementById("annualTextInput");
+        const inputBtn = document.getElementById("inputBtn");
+        const userId = localStorage.getItem("UserID");
+
+        function submitAnnualFeedback() {
+            if (annualTextInput.value && userId) {
+                const userAnnualRef = ref(appDatabase, `AnnualFunctionFeedback/${userId}`);
+
+                get(userAnnualRef).then((snapshot) => {
+                    const currentAnnualMessages = snapshot.exists() ? snapshot.val().messages || [] : [];
+                    currentAnnualMessages.push(annualTextInput.value);
+
+                    set(userAnnualRef, {
+                        messages: currentAnnualMessages
+                    });
+
+                    annualTextInput.value = '';
+                    alert('Message sent!');
+                });
+            } else {
+                alert('Invalid credentials. Please check your input and try again.');
+            }
+        }
+        inputBtn.addEventListener(
+            'click',
+            submitAnnualFeedback
+        )
+
+    </script>
+
+<script src="./Scripts/main.js"></script>
+
+</body>
+
+</html>

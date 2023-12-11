@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Do you want to go?&nbsp;&nbsp;|&nbsp;&nbsp;Galaxify</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+</head>
+
+<body class="optionsBody">
+    <nav class="navbar" id="navbar">
+        <img src="./Images/logo.png" alt="" class="logo" id="logo">
+        <h3 class="navMainTitle">Galaxify</h3>
+        <input type="text" id="feedInput" placeholder="Comment/Complain">
+        <button id="feedBtn"><img width="50" height="50" src="https://img.icons8.com/ios/50/66fcf1/sent--v1.png"
+                alt="sent--v1" /></button>
+    </nav>
+
+    <div class="options">
+        <div class="optionDiv exibitOption">
+            <h2>The Exhibition</h2>
+            <p class="optionP">Projects of various subjects</p>
+            <button class="btn" id="btn-option-exibit" onclick="window.open('./main.html', '_self')">Next</button>
+        </div>
+        <div class="optionDiv annualOption">
+            <h2>Annual Function</h2>
+            <p class="optionP">Qirat, Skits and much more</p>
+            <button class="btn" id="btn-option-annual" onclick="window.location.href = './annual.html'">Next</button>
+        </div>
+        <div class="optionDiv annualOption">
+            <h2>Admin</h2>
+            <p class="optionP">For Admins and Developers only</p>
+            <button class="btn" id="btn-option-annual"
+                onclick="window.location.href = './admin-auth.html'">Next</button>
+        </div>
+    </div>
+    <script src="./Scripts/main.js"></script>
+
+</body>
+
+</html>

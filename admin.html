@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/main.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <img src="./Images/logo.png" alt="" class="logo" id="logo">
+        <h3 class="navMainTitle">Galaxify</h3>
+        <input type="text" id="feedInput" placeholder="Comment/Complain">
+        <button id="feedBtn"><img width="50" height="50" src="https://img.icons8.com/ios/50/66fcf1/sent--v1.png"
+                alt="sent--v1" /></button>
+        <button class="backBtn btn btnBgDark" onclick="window.location.href = './options.html'">Back</button>
+    </nav>
+
+    <main class="main">
+        <h1>Hello, Admin!</h1>
+        <h3>Download Your Excel File Here:-</h3>
+        <button id="displayVotedProjectsBtn" class="btn btnBgDark">Display Voted Projects</button>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/shim.min.js"></script>
+    <script type="module" src="./Scripts/admin.js"></script>
+</body>
+
+</html>

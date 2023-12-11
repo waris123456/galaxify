@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Orbitron:wght@700&family=Poppins:wght@300&family=Space+Mono&display=swap');
+
+/* Available Fonts:exo 2, orbitron, poppins, space mono */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #0b0c10;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #66fcf1;
+    z-index: 999;
+}
+
+.navbar .logo {
+    width: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.sidebarBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: sticky;
+    padding: 0 30px;
+}
+
+.sidebarBtn svg {
+    width: 30px;
+    cursor: pointer;
+}
+
+.navSearch {
+    height: 60%;
+    width: 60%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    font-family: "poppins";
+    border-radius: 6px;
+}
+
+.searchIcon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.navBtn {
+    width: 6%;
+    height: 50%;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    outline: none;
+    color: #66fcf1;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: "orbitron";
+}
+
+.navBtn a {
+    color: #66fcf1;
+    text-decoration: none;
+}
+
+.navBtn a:hover {
+    color: #0b0c10;
+    background-color: #66fcf1;
+}
+
+@media (max-width:725px) {
+    .navBtn {
+        display: none;
+    }
+}
+
+.sidebar {
+    background-color: #0b0c10;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    left: -250px;
+    transition: 400ms;
+    margin-top: 72px;
+}
+
+.sidebar h1 {
+    font-family: "space mono";
+    color: #66fcf1;
+    font-size: 36px;
+}
+
+.sidebar a {
+    color: #66fcf1;
+    text-decoration: none;
+    font-family: poppins;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+}
+
+.displayBlock {
+    display: block;
+    padding: 10px;
+}
+
+.main {
+    font-family: poppins;
+    padding: 20px;
+}
+
+.mainTitle {
+    margin: 20px;
+    margin-top: 70px;
+}
+
+.blogContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin: 35px;
+    font-size: 30px;
+    color: #222;
+}
+
+.blog {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 28%;
+    color: #222;
+    border: 1px solid #0b0c10;
+}
+
+.blog h2 {
+    font-size: 25px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    width: auto;
+    font-size: 18px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+
+h6 {
+    font-size: 15px;
+}
+
+.a {
+    background-color: #222;
+    color: white;
+    border-radius: 9px;
+    border: none;
+    margin: 10px 0px;
+    padding: 15px;
+}
+
+.FeedDiv {
+    background-color: hsl(228, 19%, 5%);
+    border-radius: 9px;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+    border: 2px solid #66fcf1;
+    height: 200px;
+}
+
+#feedInput {
+    height: 20px;
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: poppins;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+#feedBtn {
+    height: 40px;
+    width: 40px;
+    font-size: 17px;
+    font-family: poppins;
+    font-weight: 700;
+    border: 2px solid #66fcf1;
+    border-left: none;
+    cursor: pointer;
+    outline: none;
+    color: #66fcf1;
+    background-color: transparent;
+}
+
+#feedBtn img {
+    height: 37px;
+    width: 37px;
+}
+
+.logoMy {
+    width: 120px;
+    margin: 25px;
+}
+
+.logoBms {
+    margin: 25px;
+    width: 300px;
+}
+
+.plusSign {
+    color: antiquewhite;
+    font-size: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectDiv {
+    background-color: #0b0c10;
+    padding: 10px;
+    margin: 10px;
+    padding: 20px;
+    height: 90px;
+    width: 375px;
+}
+
+.projectDiv h3 {
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.projectDiv p {
+    color: white;
+    font-size: 15px;
+}
+
+.projectBtn {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    position: relative;
+    bottom: 0;
+    padding: 9px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tabs {
+    background-color: #0b0c10;
+    padding: 10px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.tab {
+    color: #66fcf1;
+    font-family: orbitron;
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.tab:hover {
+    background-color: black;
+}
+
+.navMainTitle {
+    color: #66fcf1;
+    font-size: 25px;
+    font-family: poppins;
+    margin-right: 30px;
+}
+
+.loginBody {
+    background-color: #0b0c10;
+    font-family: poppins;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.loginForm {
+    background-color: #fff;
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.loginForm input {
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 0;
+    padding: 0 20px;
+    font-family: poppins;
+    font-size: 18px;
+}
+
+.loginForm button {
+    outline: none;
+    border: none;
+    outline: none;
+    height: 52px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: poppins;
+    width: 100px;
+    font-weight: 500;
+    background-color: transparent;
+    border-left: 1px solid #0b0c10;
+    cursor: pointer;
+}
+
+.loginForm button:hover {
+    font-weight: 900;
+}
+
+@media (max-width:900px) {
+
+    .logo,
+    .navMainTitle {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:420px) {
+    .projectDiv {
+        height: 160px;
+    }
+
+    .projectDiv h3 {
+        font-size: 18px;
+    }
+
+    .projectBtn {
+        margin: 5px;
+    }
+}
+
+.loadImg {
+    width: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.annualComment {
+    margin-top: 100px;
+    background-color: #0b0c10;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#annualInput {
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 80%;
+    font-size: 15px;
+    font-family: poppins;
+}
+
+#annualBtn {
+    border: none;
+    outline: none;
+    background-color: #0b0c10;
+    border: 2px solid #66fcf1;
+    border-left: none;
+    cursor: pointer;
+}
+
+#annualBtn img {
+    width: 46px;
+    height: 46px;
+}
+
+.login-logo {
+    margin-top: 30px;
+    width: 210px;
+}
+
+.login-title {
+    margin-bottom: 25px;
+    font-size: 50px;
+    color: #66fcf1;
+    font-family: orbitron;
+    letter-spacing: 5px;
+    font-weight: 100;
+}
+
+@media (max-width:345px) {
+    .loginForm {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .loginForm button {
+        font-size: 20px;
+    }
+}
+
+.options {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #66fcf1;
+}
+
+@media (max-width: 907px) {
+    .options {
+        flex-direction: column;
+    }
+}
+
+.optionDiv {
+    background-color: #0b0c10;
+    height: 300px;
+    width: 400px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+@media (max-width: 465px) {
+    .optionDiv {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.optionDiv h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: orbitron;
+    text-align: center;
+}
+
+.btn {
+    width: 100px;
+    background-color: transparent;
+    font-size: 18px;
+    border-radius: 0px;
+    border: 2px solid #66fcf1;
+    color: #66fcf1;
+    outline: none;
+    padding: 10px;
+}
+
+.btn:hover {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    transition: 0.4s;
+}
+
+.annualBody {
+    background-color: #0b0c10;
+}
+
+.annual-main {
+    margin-top: 100px;
+    display: flex;
+    color: #66fcf1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.annual-main h1 {
+    font: 500 50px orbitron;
+    margin: 20px;
+}
+
+.annual-main p {
+    width: 70%;
+    text-align: center;
+    font-family: poppins;
+    margin-bottom: 40px;
+}
+
+.annual-main img {
+    width: 500px;
+}
+
+#annualTextInput {
+    width: 430px;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.annualCommentSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.optionP {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+.main {
+    margin-top: 70px;
+    font-family: poppins;
+}
+
+.btnBgDark {
+    background-color: #0b0c10;
+}
+
+.backBtn {
+    position: relative;
+    left: 1%;
+    height: 40px;
+    padding: 0;
+}
+
+
+/* Admin Auth */
+.adminBody {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c10;
+    color: #66fcf1;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.h1 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 375px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+form.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.login-form label {
+    margin-bottom: 10px;
+}
+
+form.login-form input {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #0b0c10;
+    color: #66fcf1;
+    border: 1px solid #66fcf1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+form.login-form input[type="submit"] {
+    cursor: pointer;
+    background-color: #66fcf1;
+    color: #0b0c10;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+form.login-form input[type="submit"]:hover {
+    background-color: #45a29e;
+}
+
+@media (max-width:437px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.areYouAdminLink{
+    color: #66fcf1;
+    margin: 10px;
+}
+
+/* Admin table special classes */
+.voted-projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: poppins;
+}
+
+.table-header-cell, .table-data-cell {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table-data-cell{
+    font-family: poppins;
+}
+
+.table-header-cell {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-family: orbitron;
+}
